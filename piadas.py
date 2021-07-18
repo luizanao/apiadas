@@ -8,7 +8,7 @@ https://gist.githubusercontent.com/henrycunh/75abcf44146d5d9c0714932a386dbbf1/ra
 """
 import random
 import json
-
+import os
 from aiohttp import web
 
 # Partially extracted from
@@ -915,5 +915,5 @@ async def get_random_joke(request):
 
 app = web.Application()
 app.add_routes([web.get("/", get_random_joke)])
-web.run_app(app, port=5000)
+web.run_app(app, port=os.getenv("PORT", 5000))
 
