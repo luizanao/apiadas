@@ -1,1 +1,1 @@
-release: python piadas.py
+web: python piadas.py
