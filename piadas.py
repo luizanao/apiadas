@@ -915,4 +915,4 @@ async def get_random_joke(request):
 
 app = web.Application()
 app.add_routes([web.get("/", get_random_joke)])
-web.run_app(app, port=80)
+web.run_app(app)
