@@ -907,7 +907,7 @@ def _dumps(obj):
 
 
 async def get_random_joke(request):
-    jk_idx = random.randint(0, len(piadas) - 1)
+    jk_idx = random.randint(0, len(PIADAS) - 1)
 
     jk = PIADAS[jk_idx]
     return web.json_response(jk, dumps=_dumps)
